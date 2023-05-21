@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>MagicCamera</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css" />
+  </head>
+
+  <body>
+    <div id="website-container">
+      <div id="camera" class="content">
+        <div id="viewfinder">
+          <button id="button-1x" onclick="zoomIn()">
+            <img src="images/1x.svg" />
+          </button>
+          <button id="button-2x" onclick="zoomOut()">
+            <img src="images/2x.svg" />
+          </button>
+        </div>
+
+        <div id="drawer">
+          <button id="button-flash">
+            <img src="images/flash.svg" />
+          </button>
+          <button id="button-shutter" onclick="capturePhotos()">
+            <img src="images/shutter.svg" />
+          </button>
+          <button id="button-rotate" onclick="rotateCamera()">
+            <img src="images/rotate.svg" />
+          </button>
+        </div>
+      </div>
+
+      <div id="photo-library" class="content">
+        <button id="button-close" onclick="closePhotoLibrary()">
+          <img src="images/close.svg" />
+        </button>
+        <img id="photo-small" src="" />
+        <img id="photo-big" src="" />
+      </div>
+
+      <div id="camera-loading" class="overlay">
+        <img src="images/loading.gif" />
+        <p>Waiting for access...</p>
+      </div>
+
+      <div id="photo-library-loading" class="overlay">
+        <img src="images/loading.gif" />
+        <p>Hold still...</p>
+      </div>
+    </div>
+    <script src="js/scripts.js" type="text/javascript"></script>
+  </body>
+</html>

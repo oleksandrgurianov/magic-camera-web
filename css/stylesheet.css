@@ -1,0 +1,231 @@
+/* Reset styles */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* Global Styles */
+html {
+  box-sizing: border-box;
+  background: #000000;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+/* Main Content */
+#website-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#viewfinder,
+#photo-library {
+  width: 361px;
+  height: 481.33px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff33;
+  border-radius: 26px;
+  position: relative;
+}
+
+#viewfinder video {
+  width: 361px;
+  max-width: 100%;
+  height: 481.33px;
+  object-fit: cover;
+  border-radius: 26px;
+  z-index: 1;
+}
+
+#viewfinder button {
+  position: absolute;
+  bottom: 12px;
+  z-index: 2;
+}
+
+#button-2x {
+  display: none;
+}
+
+#drawer {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+#viewfinder button, #drawer button, #photo-library button {
+  padding: 0;
+  background: none;
+  border: none;
+  transition: opacity 0.1s ease-out;
+}
+
+#viewfinder button:focus, #drawer button:focus, #photo-library button:focus {
+  outline: none;
+}
+
+#viewfinder button:active, #drawer button:active, #photo-library button:active {
+  opacity: 0.5;
+}
+
+#photo-library {
+  margin-bottom: 104px;
+  padding: 0;
+  display: none;
+}
+
+#photo-library button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+}
+
+#photo-small {
+  width: 125px;
+  height: 160px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  object-fit: cover;
+  border-radius: 26px;
+  border: #000000 2px solid;
+  z-index: 2;
+}
+
+#photo-big {
+  width: 361px;
+  height: 481.33px;
+  position: relative;
+  object-fit: cover;
+  border-radius: 26px;
+  z-index: 1;
+}
+
+#photo-library-loading {
+  display: none;
+}
+
+/* Other Content */
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px;
+  gap: 32px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px;
+  gap: 16px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #00000066;
+}
+
+.overlay img {
+  width: 36px;
+  height: 36px;
+}
