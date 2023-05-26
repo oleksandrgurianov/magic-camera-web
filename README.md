@@ -1,3 +1,5 @@
+### [High Fidelity Prototype](https://www.figma.com/file/uYuTdxwZx5tpdTCPpGG2J0/MagicCamera?type=design&t=D00ky1FgVGo0NLZg-1)
+
 # Magic Camera – Progressive Web App
 
 ### Primary features:
